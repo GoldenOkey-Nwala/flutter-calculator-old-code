@@ -16,7 +16,7 @@ getColor(String text, bool darkMode) {
   if (text == "AC" || text == "(" || text == ")") {
     return darkMode ? orange : green;
   }
-  if (text == "/" || text == "*" || text == "-" || text == "+" || text == "=") {
+  if (text == "/" || text == "x" || text == "-" || text == "+" || text == "=") {
     return darkMode ? green : orange;
   }
   return darkMode ? white : dark;
@@ -24,11 +24,11 @@ getColor(String text, bool darkMode) {
 
 getUserInputColor(String userInput, bool darkMode) {
   if (userInput.contains("/") ||
-      userInput.contains("*") ||
+      userInput.contains("x") ||
       userInput.contains("-") ||
       userInput.contains("+")) {
     return darkMode ? green : orange;
   } else {
     return darkMode ? white : dark;
   }
-} 
+}
